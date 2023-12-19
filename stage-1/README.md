@@ -2,30 +2,11 @@
 DumbWays merupakan bootcamp DevOps gratis dan disalurkan kerja!
 
 ## Minggu ke 1
-- Setup ubuntu server di VMWare & Install aplikasi nginx
-- Setup ubuntu server di AWS & Deploy aplikasi frontend
-- [Baca lebih lanjut](week-1/README.md)
+- Fundamental DevOps & Step by step pembuatan ubuntu server [Baca lebih lanjut](week-1/day1/README.md)
+- Basic network & Basic linux shell [Baca lebih lanjut](week-1/day2/README.md)
+- Fundamental VCS GIT & Comman git [Baca lebih lanjut](week-1/day3/README.md)
 
 ## Minggu ke 2
-- Setup git & Ssh key
-- Setup database & Deploy aplikasi backend
-- [Baca lebih lanjut](week-2/README.md)
-
-## Minggu ke 3
-- Setup docker & Membuat custom docker image
-- Setup CI/CD & Notifikasi]
-- [Baca lebih lanjut](week-3/README.md)
-
-## Minggu ke 4
-- Setup monitoring
-- Setup ansible & Membuat ansible playbook untuk konfigurasi server
-- [Baca lebih lanjut](week-4/README.md)
-
-## Additional
-- Setup container orchestration
-- Setup microservices application
-- [Baca lebih lanjut](week-1/README.md)
-
-## Final
-- Final examination
-- [Baca lebih lanjut](final/README.md)
+- Fundamental teks editor & Manipulation teks & Fundamental Firewall [Baca lebih lanjut](week-2/day4/README.md)
+- Fundamental aplikasi & Membuat 3 simpel aplikasi & Research PM2 [Baca lebih lanjut](week-2/day5/README.md)
+- Fundamental web server & Praktek penerapan reverse proxy dan load balancing pada webserver [Baca lebih lanjut](week-2/day6/README.md)
