@@ -10,5 +10,5 @@ Jelaskan kebutuhan yang harus ada sebelum memulai, seperti:
 - Dll
 
 # Penyelesaian
-- [Task day 1](week1/day1-README.md)
+- [Task day 1](day1)
 - 
