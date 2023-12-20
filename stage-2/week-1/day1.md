@@ -1,5 +1,5 @@
 # DAY 1 
-## Tasks : [ Appserver ]
+## Tasks : Deploy aplikasi Frontend
 - Jelasakan langkah-langkah pembuatan VM di BiznetGio
 -  Setelah server sudah terbuat, buatlah suatu user baru lalu implementasikan penggunaan ssh-key pada server tersebut.
 -  Deploy aplikasi Wayshub-Frontend menggunakan nodejs versi 14.x
