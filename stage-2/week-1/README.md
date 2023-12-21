@@ -14,4 +14,4 @@ Jelaskan kebutuhan yang harus ada sebelum memulai, seperti:
 
 # Penyelesaian
 - [Task day 1](day1.md)
-- [Task day 1](day2.md)
+- [Task day 2](day2.md)
