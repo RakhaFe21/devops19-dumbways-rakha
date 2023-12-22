@@ -119,19 +119,21 @@ akses database hanya bisa menggunakan password
 
 ### Konfigurasi web SSL pada server gateway
 1. Install certbot menggunakan perintah 
-	`sudo snap install --classic	certbot`
+	`sudo snap install --classic certbot`
 	![enter image description here](https://github.com/RakhaFe21/devops19-dumbways-rakha/blob/main/stage-2/week-1/assets/Screenshot%20from%202023-12-20%2022-13-56.png?raw=true)
-2. Buat file bernama `.secret` lalu masukkan cloudflare email dan api key nya sesuai dengan resource
+2. Buat file bernama `.secret` lalu masukkan cloudflare email dan api key nya sesuai dengan resource. Setting permission dari file tersebut menjadi 400 dengan perintah `sudo chmod 400 .secret`
 	![enter image description here](https://github.com/RakhaFe21/devops19-dumbways-rakha/blob/main/stage-2/week-1/assets/Screenshot%20from%202023-12-20%2022-16-42.png?raw=true)
-3. Setting command certbot agar dapat di jalankan dengan perintah 
-	`sudo ln -s /snap/bin/certbot /usr/bin/certbot`
-4. Jalankan perintah untuk create certificates `sudo certbot --nginx` lalu inputkan domain yang akan diberi certificates
-	![enter image description here](https://github.com/RakhaFe21/devops19-dumbways-rakha/blob/main/stage-2/week-1/assets/Screenshot%20from%202023-12-20%2022-18-30.png?raw=true)
-![enter image description here](https://github.com/RakhaFe21/devops19-dumbways-rakha/blob/main/stage-2/week-1/assets/Screenshot%20from%202023-12-20%2022-19-01.png?raw=true)
-	
-5. Pembuktian bahwa certificate telah terpasang otomatis pada konfigurasi aplikasi di nginx
-	![enter image description here](https://github.com/RakhaFe21/devops19-dumbways-rakha/blob/main/stage-2/week-1/assets/Screenshot%20from%202023-12-20%2022-19-16.png?raw=true)
-![enter image description here](https://github.com/RakhaFe21/devops19-dumbways-rakha/blob/main/stage-2/week-1/assets/Screenshot%20from%202023-12-20%2022-30-03.png?raw=true)
+
+3. Jalankan perintah untuk create certificates 
+`sudo certbot certonly --dns-cloudflare --dns-cloudflare-credentials ~/.secret rakha.studentdumbways.my.id,*.rakha.studentdumbways.my.id --preferred-challenges dns-01` 
+![enter image description here](https://github.com/RakhaFe21/devops19-dumbways-rakha/blob/main/stage-2/week-1/assets/Screenshot%20from%202023-12-22%2010-36-13.png?raw=true)
+4. Pasang certificate secara manual pada konfigurasi aplikasinya
+	![enter image description here](https://github.com/RakhaFe21/devops19-dumbways-rakha/blob/main/stage-2/week-1/assets/Screenshot%20from%202023-12-21%2012-00-03.png?raw=true)	
+5. Pembuktian bahwa certificate telah terpasang ada aplikasi
+	![enter image description here](https://github.com/RakhaFe21/devops19-dumbways-rakha/blob/main/stage-2/week-1/assets/Screenshot%20from%202023-12-21%2011-58-55.png?raw=true)
+6. Cek certificates di web browser
+	![enter image description here](https://github.com/RakhaFe21/devops19-dumbways-rakha/blob/main/stage-2/week-1/assets/Screenshot%20from%202023-12-22%2010-46-30.png?raw=true)
+
 ### Test akses pada web browser
 1. Aplikasi telah ter-secure menggunakan SSL
 	![enter image description here](https://github.com/RakhaFe21/devops19-dumbways-rakha/blob/main/stage-2/week-1/assets/Screenshot%20from%202023-12-20%2022-30-06.png?raw=true)
