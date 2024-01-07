@@ -34,6 +34,7 @@ Tasks : [ Jenkins ]
 3. Install plugin suggested
 4. membuat user dengan nama team3
 5. Jika sudah masuk, installasi lagi plugin yang dibutuhkan
+![](https://github.com/RakhaFe21/devops19-dumbways-rakha/blob/main/stage-2/week-2/assets/Screenshot_from_2024-01-06_19-55-53.png?raw=true)
 
 
 
