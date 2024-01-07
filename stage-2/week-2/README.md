@@ -16,3 +16,5 @@ Jelaskan kebutuhan yang harus ada sebelum memulai, seperti:
 
 # Penyelesaian
 - [Task Day 3](day3.md)
+- [Task Day 4](day4.md)
+- [Task Day 5](day5.md)
