@@ -1,14 +1,21 @@
 # Week 3
-Jelaskan maksud dari week 3 ini, apa yang akan Anda buat serta berikan gambar arsitekturnya.
+Pada minggu ini kami diberikan materi baru yaitu monitoring dan Infrakstruktur as a Code. Materi ini akan sangat berguna pada dunia industri karena mengandung aspek-aspek yang sangat dibutuhkan pada industri. Adapaun gambaran arsitektur untuk project minggu ketiga keseluruhan sebagai berikut:
+![](https://github.com/RakhaFe21/devops19-dumbways-rakha/blob/main/stage-2/week-3/assets/rakha's%20ss%20(8).png?raw=true)
 
 # Kebutuhan
-Jelaskan kebutuhan yang harus ada sebelum memulai, seperti:
-- Server : -
-- Security group : -
-- Aplikasi frontend : -
-- Aplikasi backend : -
-- Dll
+- Server : VM Microsoft Azure dan BiznetGio Neo Compute
+- Terraform
+- Ansible
+- Software monitoring:
+  - Grafana
+  - Prometheus
+  - Node-exporter
+  - Cadvisor
+- Webserver : NginX
+- [ Aplikasi frontend](https://github.com/dumbwaysdev/wayshub-frontend.git)
+- Visual Studio Code
 
 # Penyelesaian
-- [Setup docker & Membuat custom docker image](setup-docker-dan-membuat-custom-docker-image.md)
-- [Setup CI/CD & Notifikasi](setup-ci-cd-dan-notifikasi.md)
+- [day 6 (monitoring server)](day6.md)
+- [day 7 (Ansible & Ansible playbooks)](day7.md)
+- [day 8 (Challenge terraform)](day8.md)
