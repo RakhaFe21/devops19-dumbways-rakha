@@ -42,6 +42,11 @@ Saya membagi dua part pada file ini yaitu untuk server azure menggunakan login s
 	![enter image description here](https://github.com/RakhaFe21/devops19-dumbways-rakha/blob/main/stage-2/week-3/assets/carbon%20%2846%29.png?raw=true)
 - Setup reverse proxy with SSL wildcard using docker compose
 	![enter image description here](https://github.com/RakhaFe21/devops19-dumbways-rakha/blob/main/stage-2/week-3/assets/carbon%20%2847%29.png?raw=true)
+
+### Command ansible
+- untuk eksekusi 	: `ansible-playbook -K file.yaml` (require sudo password)
+- untuk check syntax 	: `ansible-playbook --syntax-check file.yaml`
+
 ### Ansible format tree
 ├── ansible.cfg
 
