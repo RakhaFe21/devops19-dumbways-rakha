@@ -15,6 +15,8 @@ Task:
 -   dan yang paling penting make your own kind ansible script dengan rapi dan jelas. dan sebisa mungkin jangan  **MENCONTEK**  milik teman lain karena script akan terlihat sekali perbedaan nya di materi ansible ini.
 -   simpan script kalian ke dalam github dengan format tree sebagai berikut:
 
+## Arsitektur Ansible
+![](https://github.com/RakhaFe21/devops19-dumbways-rakha/blob/main/stage-2/week-3/assets/1_MLPdeP8OQw14v7R79max6g.png?raw=true)
 ## Step by step
 ### Ansible installation on local computer
 Install ansible di ubuntu menggunakan referensi berikut :
