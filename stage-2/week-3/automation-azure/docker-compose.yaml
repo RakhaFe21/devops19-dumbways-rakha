@@ -1,0 +1,56 @@
+version: "3.8"
+services:
+
+  database:
+    container_name: mysql
+    image: mysql:latest
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=terserah123!
+      - MYSQL_USER=team3
+      - MYSQL_PASSWORD=terserah123!
+      - MYSQL_DATABASE=literature
+    volumes:
+      - ~/myql:/var/lib/mysql
+    networks:
+      team3:
+
+  backend:
+    container_name: be
+    image: rakhafe/backend:10
+    depends_on:
+      - database
+    ports:
+      - "5000:5000"
+    networks:
+      team3:
+
+  frontend:
+    container_name: fe
+    image: rakhafe/frontend:54
+    ports:
+      - "3000:3000"
+    networks:
+      team3:
+
+  webserver:
+    container_name: nginx
+    restart: always
+    image: nginx:latest
+    depends_on:
+      - database
+      - backend
+      - frontend
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - "./nginx:/etc/nginx/conf.d"
+      - "./nginx/certs:/etc/nginx/certs"
+    networks:
+      team3:
+
+networks:
+  team3:

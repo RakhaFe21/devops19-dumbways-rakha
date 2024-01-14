@@ -1,0 +1,39 @@
+- name: reverse proxy and create ssl certificates
+  hosts: azure
+  become: true
+  tasks:
+
+  - name: "create reverse-ssl folder"
+    file: 
+      path: ~ansible/reverse-ssl
+      state: directory
+      owner: ansible
+      group: ansible
+      mode: 0700
+
+  - name: "upload docker compose"
+    copy:
+      src: ./reverse-ssl/docker-compose.yaml
+      dest: ~ansible/reverse-ssl/docker-compose.yaml
+      owner: ansible
+      group: ansible
+      mode: 0664
+
+  - name: "upload cloudflare.ini"
+    copy:
+      src: ./reverse-ssl/cloudflare.ini
+      dest: ~ansible/reverse-ssl/cloudflare.ini
+      owner: ansible
+      group: ansible
+      mode: 0400
+
+  - name: "upload nginx.conf"
+    copy:
+      src: ./reverse-ssl/nginx/nginx.conf
+      dest: ~ansible/reverse-ssl/nginx
+      owner: ansible
+      group: ansible
+      mode: 0664
+
+  - name: "deploy"
+    shell: cd reverse-ssl/ && docker compose up -d

@@ -1,0 +1,5 @@
+[azure]
+137.117.68.156 ansible_user=ansible
+
+[biznet]
+103.127.132.48 ansible_user=ansible

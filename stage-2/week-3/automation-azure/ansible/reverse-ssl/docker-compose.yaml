@@ -1,0 +1,35 @@
+version: '3'
+services:
+
+  nginx:
+    image: nginx
+    user: root
+    ports:
+      - "80:80"
+      - "443:443"
+    restart: "unless-stopped"
+    networks:
+      proxy:
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/nginx.conf
+      - ./certbot/:/etc/letsencrypt
+
+  certbot:
+    image: certbot/dns-cloudflare
+    volumes:
+      - ./certbot:/etc/letsencrypt
+      - ./cloudflare.ini:/root/cloudflare.ini
+    command: >-
+      certonly --dns-cloudflare
+      --dns-cloudflare-credentials /root/cloudflare.ini
+      --dns-cloudflare-propagation-seconds 15
+      --email jagadsatya1103@gmail.com
+      --agree-tos --no-eff-email
+      --force-renewal
+      -d azure.studentdumbways.my.id
+      -d *.azure.studentdumbways.my.id
+    networks:
+      proxy:
+
+networks:
+  proxy:

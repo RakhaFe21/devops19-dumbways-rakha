@@ -1,0 +1,24 @@
+- hosts: azure
+  become: true
+  tasks: 
+
+
+  - name: "create monitoring folder"
+    file: 
+      path: ~ansible/monitoring
+      state: directory
+      owner: ansible
+      group: ansible
+      mode: 0700
+    
+
+  - name: "upload docker compose"
+    copy:
+      src: ./monitoring-app/docker-compose.yaml
+      dest: ~ansible/monitoring/docker-compose.yaml
+      owner: ansible
+      group: ansible
+      mode: 0664
+
+  - name: "running node application"
+    shell: cd monitoring/ && docker compose up -d

@@ -1,0 +1,14 @@
+- hosts: all
+  become: true
+  tasks: 
+
+  - name: "upload docker compose"
+    copy:
+      src: /home/rakhafe/automation-azure/docker-compose.yaml
+      dest: ~ansible/docker-compose.yaml
+      owner: ansible
+      group: ansible
+      mode: 0664
+
+  - name: "running frontend application"
+    shell: docker compose up -d frontend

@@ -1,0 +1,54 @@
+- hosts: biznet
+  become: true
+  tasks:
+
+# for azure server which is login ssh using password
+
+  # - name: "Add the new user for azure server"
+  #   ansible.builtin.user:
+  #     name: '{{username}}'
+  #     password: "$6$ae9NqHtr3bZhkL8J$7c2oniGemVDGYYWBPRzTdOmegFg3pu1wCa15chUVypVaJIvFqRN6sU2G/OFsdvvUqtekVJ2iFAPJCxWWvCw0L." #pw=ansible123
+  #     shell: /bin/bash
+  #     groups: sudo
+  #     append: yes
+  #     home: /home/{{username}}
+  #     state: present
+
+  # - name: "Configuration sshd for azure server"
+  #   lineinfile:
+  #     path: '{{item}}'
+  #     regexp: 'PasswordAuthentication no'
+  #     line: 'PasswordAuthentication yes'
+  #   loop:
+  #     - /etc/ssh/sshd_config
+  #     - /etc/ssh/sshd_config.d/50-cloud-init.conf
+
+# for biznet server which is login ssh using ssh key from local
+
+  - name: "Add the new user for biznet server"
+    user:
+      name: '{{username}}'
+      shell: /bin/bash
+      groups: sudo
+      append: yes
+      home: /home/ansible
+      state: present
+  - name: "create .ssh folder"
+    file: 
+      path: ~ansible/.ssh
+      state: directory
+      owner: ansible
+      group: ansible
+      mode: 0700
+  - name: "create authorized_keys"
+    copy:
+      src: ~/.ssh/id_rsa.pub
+      dest: ~ansible/.ssh/authorized_keys
+      owner: ansible
+      group: ansible
+      mode: 0600
+  - name: "reload sshd"
+    ansible.builtin.systemd_service:
+      name: sshd
+      state: reloaded
+  
