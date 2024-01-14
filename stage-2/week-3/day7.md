@@ -31,7 +31,8 @@ https://docs.ansible.com/ansible/latest/installation_guide/installation_distros.
 	- group_vars/all
 	![enter image description here](https://github.com/RakhaFe21/devops19-dumbways-rakha/blob/main/stage-2/week-3/assets/Screenshot%20from%202024-01-14%2009-44-29.png?raw=true)
 - Create new user
-Saya membagi dua part pada file ini yaitu untuk server azure menggunakan login ssh key dan server biznet menggunakan login password
+
+	Saya membagi dua part pada file ini yaitu untuk server azure menggunakan login ssh key dan server biznet menggunakan login password
 	-	Server azure
 		![enter image description here](https://github.com/RakhaFe21/devops19-dumbways-rakha/blob/main/stage-2/week-3/assets/carbon%20%2842%29.png?raw=true)
 	-	Server biznet
