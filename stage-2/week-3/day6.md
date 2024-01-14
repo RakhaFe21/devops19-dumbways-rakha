@@ -23,7 +23,8 @@ Tasks :
     -   Monitoring specific container
     -   deploy application frontend di app-server
         -   monitoring frontend container
-   
+## Arsitektur server
+![](https://github.com/RakhaFe21/devops19-dumbways-rakha/blob/main/stage-2/week-3/assets/rakha's%20ss%20(7).png?raw=true)
 ## Step by step
 
 ### Setup environment monitoring
