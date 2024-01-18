@@ -1,14 +1,11 @@
 # Week 4
-Jelaskan maksud dari week 4 ini, apa yang akan Anda buat serta berikan gambar arsitekturnya.
-
+Pada minggu 4 ini kami diberikan materi tentang container orkestrasi menggunakan kubernetes. 
 # Kebutuhan
 Jelaskan kebutuhan yang harus ada sebelum memulai, seperti:
-- Server : -
-- Security group : -
-- Aplikasi frontend : -
-- Aplikasi backend : -
-- Dll
+- Server :
+  - Master
+  - Node
+- Visual studio code
 
 # Penyelesaian
-- [Setup monitoring](setup-monitoring.md)
-- [Setup ansible & Membuat ansible playbook untuk konfigurasi server](setup-ansible-dan-membuat-ansible-playbook-untuk-konfigurasi-server.md)
+- [day 9](day9.md)
