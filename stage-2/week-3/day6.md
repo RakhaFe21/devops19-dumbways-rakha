@@ -1,6 +1,6 @@
 # Day 6
 ![enter image description here](https://github.com/RakhaFe21/devops19-dumbways-rakha/blob/main/stage-2/week-3/assets/1_tLaFWxgkVNfYbN3NTKQo-w.gif?raw=true)
-Tasks :
+Tasks : [Monitoring]
 
 -   Setup node-exporter, prometheus dan Grafana menggunakan docker
 -   install node-exporter di appserver & gateway
