@@ -1,5 +1,5 @@
 # Day 8 (Challenge Task)
-Challenge Task:
+Challenge Task: Terraform
 
 1.  Dengan mendaftar akun free tier AWS/GCP/Azure, buatlah Infrastructre dengan terraform menggunakan registry yang sudah ada. (spec menyesuaikan saja dengan free tier yang di dapatkan)
 
