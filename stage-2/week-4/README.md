@@ -4,7 +4,7 @@ Pada minggu 4 ini kami diberikan materi tentang container orkestrasi menggunakan
 Jelaskan kebutuhan yang harus ada sebelum memulai, seperti:
 - Server :
   - Master
-  - Node
+  - Worker
 - Visual studio code
 
 # Penyelesaian
