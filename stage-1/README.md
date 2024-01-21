@@ -1,5 +1,4 @@
 # DevOps Engineer - Rakha Febryza Rasendriya - Dumbways.id
-DumbWays merupakan bootcamp DevOps gratis dan disalurkan kerja!
 
 ## Minggu ke 1
 - Fundamental DevOps & Step by step pembuatan ubuntu server [Baca lebih lanjut](week-1/day1/README.md)
