@@ -206,10 +206,12 @@ Access dashboard grafana using domain monitoring.rakha.studentdumbways.my.id and
 			```sh
 			sum(rate(node_network_receive_bytes_total[1m])) by (device, instance) * on(instance) group_left(nodename) (node_uname_info)
 			```
-		-	 Promql formula for Network output	
-				```sh
-				sum(rate(node_network_transmit_bytes_total[1m])) by (device, instance) * on(instance) group_left(nodename) (node_uname_info)
-				```
+	- 	Promql formula for Network output
+  
+	  		```sh
+			sum(rate(node_network_transmit_bytes_total[1m])) by (device, instance) * on(instance) group_left(nodename) (node_uname_info)
+
+  			```
 - Disk available
 	![enter image description here](https://github.com/RakhaFe21/devops19-dumbways-rakha/blob/main/stage-2/final/assets/Screenshot%20from%202024-01-27%2023-19-17.png?raw=true)
 	- Promql formula
