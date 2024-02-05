@@ -11,3 +11,4 @@
   - [week-2](stage-2/week-2)
   - [week-3](stage-2/week-3)
   - [week-4](stage-2/week-4)
+  - [final-task](stage-2/final)
